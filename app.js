@@ -13,7 +13,7 @@ const upload = require('./routes/upload')
 const minify = require('./routes/minify')
 
 let app = new Koa()
-const PORT = process.env.PORT | 3000
+const PORT = process.env.PORT || 3000
 
 app.use(views(__dirname + '/views', { extension: 'ejs' }))
     .use(serve(__dirname + '/public'))
