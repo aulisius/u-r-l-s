@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+  <% include ../partials/nav.ejs %>
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1>Short URL Generator</h1>
+    <h3> <%= block.quote %> </h2>
+    <h4><i>- <%= block.author %> </i></h4> 
+    <br/>
+    <a type="button" class="btn btn-lg btn-default" href="/upload" <span class="glyphicon glyphicon-flash"></span> Generate new Link</a>
+    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/faizaanceg/u-r-l-s"><span class="glyphicon glyphicon-git-branch"></span> Fork on GitHub</a>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h3><span class="glyphicon glyphicon-info-sign"></span><span> </span> How this app works</h3>
+      <ul>
+        <li>Click on 'Generate a new Link' to take you to the generate page.</li>
+        <li>Fill out the <em>alias field </em> with your custom name and the <em>URL field</em> with the URL you wish to shorten.</li>
+        <li>Click on 'Generate' to create the link.</li>
+        <li>Use your shortened link now instead of the original one.</li>
+        <li>Example: <a href="/repo"> u-r-l-s.herokuapp.com/repo </a></li>
+      </ul>
+    </div>
+  </div> <!-- row -->
+</div>
+
+</body>
+</html>

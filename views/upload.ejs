@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../partials/header.ejs %>
+</head>
+
+<body>
+    <% include ../partials/nav.ejs %>
+    <div class="container">
+        <h2>Create a new Link</h2>
+        <% if (afterMinify) { %>
+            <p class="alert alert-info"> <b><%= message %></b> at <a href="<%= link %>" class="alert-link"><%= link %></a> </p>
+        <% } %>
+
+        <div class="well">
+        <form name="create" action="/minify" method="POST" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded">
+            Original link : <input id="original" name="original" type="url" placeholder="http://www.example.com" required/> <br/> <br/> 
+            Your alias : <input id="alias" name="alias" type="text" pattern="[a-zA-Z0-9\-]+" placeholder="alias" required/> <br/> <br/>
+            <input type="submit" value="generate" class="btn btn-primary" onsubmit="return validateForm()">
+       </form>
+        </div>
+   </div>
+   <script> 
+    function validateForm() {
+        let original = document.getElementById('original').value.trim()
+        let alias = document.getElementById('alias').value.trim()
+    
+        if (alias.length === 0|| original.length === 0) {
+            alert("All fields must be filled!")
+            return false;
+        }
+        
+        return true; 
+    }
+  </script>
+</body>
+
+</html>

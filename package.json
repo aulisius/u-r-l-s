@@ -1,0 +1,37 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "sURL generator",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r dotenv/config app.js"
+  },
+  "keywords": [
+    "koa",
+    "short url",
+    "heroku"
+  ],
+  "author": "Faizaan <aulisius7@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.5.1",
+    "koa": "^2.0.0-alpha.5",
+    "koa-body": "^1.4.0",
+    "koa-compress": "^2.0.0",
+    "koa-favicon": "^2.0.0",
+    "koa-helmet": "^2.0.0",
+    "koa-logger": "^2.0.0",
+    "koa-router": "^7.0.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.0.2",
+    "pg-promise": "^5.3.1",
+    "prog-quote": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.10.0"
+  },
+  "engines": {
+    "node": "6.0.0"
+  }
+}

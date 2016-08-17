@@ -1,0 +1,6 @@
+{
+  "name": "url-shortener",
+  "description": "sURL generator",
+  "repository": "https://github.com/faizaanceg/u-r-l-s",
+  "keywords": ["node", "koa", "url", "pgsql"]
+}
